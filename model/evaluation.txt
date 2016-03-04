@@ -1,0 +1,7 @@
+Performance by label (#match, #model, #ref) (precision, recall, F1):
+    OOV: (10325, 11382, 12343) (0.9071, 0.8365, 0.8704)
+    IV: (16021, 18039, 17078) (0.8881, 0.9381, 0.9124)
+Macro-average precision, recall, F1: (0.897633, 0.887307, 0.891413)
+Item accuracy: 26346 / 29421 (0.8955)
+Instance accuracy: 535 / 1967 (0.2720)
+Elapsed time: 0.716448 [sec] (2745.5 [instance/sec])
