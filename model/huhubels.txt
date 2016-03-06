@@ -1,5 +1,5 @@
-#MLRT	#	IV	5
-token 	pos 	OOV|IV	length
+#MLRT	#	5	#ML	LRT	False	False	#MLRT	IV
+token 	pos 	length	prefix	suffix	hasrepconchar	isAlpha	normalized form OOV|IV
 
 1. From training set, extract features
 	FEATURE GENERATION
@@ -17,14 +17,14 @@ token 	pos 	OOV|IV	length
 		i. word length (benchmark)
 		j. numeric tokens are considered as IV
 		k. prefix and suffix of the token (benchmark) [3 characters before and after]
+		l. repetitive characters
+		m. alphanumeric tokens - high probability of being OOV
+		o. normalized form of the token [to be extracted from the training set]
 
 		To be implemented features: 
-		k. repetitive characters
-		l. normalized form of the token [to be extracted from the training set]
-		m. edit distance feature
-		n. check if token is in the lexical normalization dictionary
+		p. edit distance feature
+		q. check if token is in the lexical normalization dictionary
 		   OOV - if token is in the lexical normalization dictionary
 		   IV - if token is in not the lexical normalization dictionary
-		o. alphanumeric tokens - high probability of being OOV
 
 word2vec
