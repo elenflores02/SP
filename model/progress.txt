@@ -46,3 +46,11 @@ WHAT TO DO NEXT
 		= else -> use GOUWS methods to normalize the OOV token
 
 2. Expand dictionary to accomodate not only english words but also tagalog and bisaya
+
+=======================================================================================
+
+GIT
+
+* git add -A
+* git commit -m "message"
+* git push -u SP master
