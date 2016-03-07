@@ -1,0 +1,48 @@
+WHAT I HAVE DONE
+
+#MLRT	#	5	#ML	LRT	False	False	#MLRT	IV
+token 	pos 	length	prefix	suffix	hasrepconchar	isAlpha	normalized form OOV|IV
+
+1. From training set, extracted features
+	FEATURE GENERATION
+		a. token
+		b. pos tag
+		c. OOV - if token is not in the SCOWL dictionary
+		   IV - if token is in the SCOWL dictionary
+
+		   SCOWL -> edited to accept only A(a) and I rather than all the alphabets (Upper|Lower)
+		d. token before the current token
+		e. token after the current token
+		f. pos tag of token before the current token
+		g. pos tag of token after the current token
+		h. proper nouns, usernames, mentions, punctuations, numerals and hashtags are considered IV
+		i. word length
+		j. numeric tokens are considered as IV
+		k. prefix and suffix of the token (benchmark) [3 characters before and after]
+		l. repetitive characters
+		m. alphanumeric tokens - high probability of being OOV
+		n. normalized form of the token [to be extracted from the training set]
+
+		To be implemented features: 
+		o. edit distance feature
+		p. check if token is in the lexical normalization dictionary
+		   OOV - if token is in the lexical normalization dictionary
+		   IV - if token is in not the lexical normalization dictionary
+
+2. Crawled Sunstar's first page using scrapy
+
+WHAT TO DO NEXT
+
+1. have a recursive crawler that crawls all news in the sunstar website
+2. clean crawled data by using regex to remove all html tags
+3. set up word2vec model
+4. feed data to word2vec model
+
+=======================================================================================
+
+1. Since the CRF model has been trained to detect OOV tokens, the next step is to:
+	- check if OOV token is in normalization lexical dictionary:
+		= if token is in the dictionary -> get the normalized form
+		= else -> use GOUWS methods to normalize the OOV token
+
+2. Expand dictionary to accomodate not only english words but also tagalog and bisaya
