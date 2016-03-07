@@ -5,20 +5,18 @@ from scrapy.selector import HtmlXPathSelector
 from crawler.items import CrawlerItem
 
 class InfoSpider(scrapy.Spider):
-    name = "info"
+    name = "spider"
     allowed_domains = ["sunstar.com.ph"]
     start_urls = [
-        "http://www.sunstar.com.ph/latest-news/"
+        "http://www.sunstar.com.ph/latest-news"
     ]
+    for x in xrange(2,5):
+        start_urls.append("http://www.sunstar.com.ph/latest-news?page="+str(x))
 
     rules = (
         Rule(SgmlLinkExtractor(allow=(), restrict_xpaths=('//a[@class="button next"]',)), callback="parse_items", follow= True),
     )
 
-    #def parse(self, response):
-    #    filename = response.url.split("/")[-2] + '.html'
-    #    with open(filename, 'wb') as f:
-    #        f.write(response.body)
 
     def parse(self, response):
         hxs = HtmlXPathSelector(response)
@@ -30,3 +28,5 @@ class InfoSpider(scrapy.Spider):
             item["link"] = titles.xpath("a/@href").extract()
             items.append(item)
         return(items)
+
+# scrapy crawl spider -o items.csv -t csv
