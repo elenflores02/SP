@@ -33,8 +33,10 @@ token 	pos 	length	prefix	suffix	hasrepconchar	isAlpha	normalized form OOV|IV
 
 WHAT TO DO NEXT
 
-1. have a recursive crawler that crawls all news in the sunstar website
-2. clean crawled data by using regex to remove all html tags
+1. [x] have a recursive crawler that crawls all news in the sunstar website
+2. [x] clean crawled data by using regex to remove all html tags
+	- "\n" -> translate to new line
+	- "\u" -> remove all unnecessary tags
 3. set up word2vec model
 4. feed data to word2vec model
 
