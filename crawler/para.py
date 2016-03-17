@@ -1,22 +1,31 @@
 from bs4 import BeautifulSoup
+import os
 
-content = open("461216.html",'r').read()
-soup = BeautifulSoup(content, 'html.parser')
-title = soup.findAll('h1',{'class':'title'})
-caption = soup.findAll('div',{'class':'image-caption clearfix'})
-result = soup.findAll('div',{'class':'field-item even'})
+links = []
 
-f = open('461216.txt', 'w')
-f.write(str(title))
-f.write(str(caption))
-f.write(str(result))
-f.close()
+for root, dirs, files in os.walk(r'html-files'):
+    for file in files:
+    	if file.endswith('.html'):
+    		links.append(file)
 
-content2 = open("461216.txt",'r').read()
-soup2 = BeautifulSoup(content2, 'html.parser')
-result2 = soup2.get_text()
+for index in range(len(links)):
+	content = open("html-files/"+links[index],'r').read()
+	soup = BeautifulSoup(content, 'html.parser')
+	title = soup.findAll('h1',{'class':'title'})
+	caption = soup.findAll('div',{'class':'image-caption clearfix'})
+	result = soup.findAll('div',{'class':'field-item even'})
+
+	f = open('sentences/'+links[index]+'.txt', 'w')
+	f.write(str(title))
+	f.write(str(caption))
+	f.write(str(result))
+	f.close()
+
+	content2 = open("sentences/"+links[index]+".txt",'r').read()
+	soup2 = BeautifulSoup(content2, 'html.parser')
+	result2 = soup2.get_text()
 
 
-f = open('461216.txt', 'w')
-f.write(str(result2))
-f.close()
+	f = open('sentences/'+links[index]+'.txt', 'w')
+	f.write(str(result2))
+	f.close()

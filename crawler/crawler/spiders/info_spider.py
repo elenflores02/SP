@@ -8,10 +8,11 @@ class InfoSpider(scrapy.Spider):
     name = "spider"
     allowed_domains = ["sunstar.com.ph"]
     start_urls = [
-        "http://www.sunstar.com.ph/latest-news"
+        "http://www.sunstar.com.ph/business"
     ]
-    for x in xrange(2,5):
-        start_urls.append("http://www.sunstar.com.ph/latest-news?page="+str(x))
+    #number of pages
+    for x in xrange(2, 356):
+        start_urls.append("http://www.sunstar.com.ph/business?page="+str(x))
 
     rules = (
         Rule(SgmlLinkExtractor(allow=(), restrict_xpaths=('//a[@class="button next"]',)), callback="parse_items", follow= True),
