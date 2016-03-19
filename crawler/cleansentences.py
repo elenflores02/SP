@@ -28,7 +28,7 @@ for index in range(len(links)):
 		newsen = newsen.strip("]")
 		cleansen.append(newsen)
 
-	f = open('clean-business/'+links[index], 'w')
+	f = open('clean/'+links[index], 'w')
 	for word in cleansen:
 		f.write(word)
 	f.close()
