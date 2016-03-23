@@ -4,21 +4,23 @@ SUNSTAR
 "http://www.sunstar.com.ph/opinion"									672		[x]
 "http://www.sunstar.com.ph/sports"									640		[x]
 "http://www.sunstar.com.ph/feature"									72		[x]
-"http://www.sunstar.com.ph/lifestyle"								373		[]
-"http://www.sunstar.com.ph/entertainment"							130		[]
+"http://www.sunstar.com.ph/lifestyle"								373		[x]
+"http://www.sunstar.com.ph/entertainment"							130		[x]
 
 SUPERBALITA
 "http://www.sunstar.com.ph/superbalita-cagayan-de-oro/balita"		223		[x]
 "http://www.sunstar.com.ph/superbalita-cagayan-de-oro/opinyon"		7		[x]
-"http://www.sunstar.com.ph/superbalita-cagayan-de-oro/isports"		82		[]
-"http://www.sunstar.com.ph/superbalita-cagayan-de-oro/kalingawan"	49		[]
+"http://www.sunstar.com.ph/superbalita-cagayan-de-oro/isports"		82		[x]
+"http://www.sunstar.com.ph/superbalita-cagayan-de-oro/kalingawan"	49		[x]
 
 "http://www.sunstar.com.ph/superbalita-cebu/balita"					515		[x]
-"http://www.sunstar.com.ph/superbalita-cebu/opinyon"				182		[]
+"http://www.sunstar.com.ph/superbalita-cebu/opinyon"				182		[x]
 "http://www.sunstar.com.ph/superbalita-cebu/isports"				305		[x]
-"http://www.sunstar.com.ph/superbalita-cebu/kalingawan"				219		[]
+"http://www.sunstar.com.ph/superbalita-cebu/kalingawan"				219		[x]
 
 "http://www.sunstar.com.ph/superbalita-davao/balita"				195		[x]
-"http://www.sunstar.com.ph/superbalita-davao/opinyon"				79		[]
-"http://www.sunstar.com.ph/superbalita-davao/isports"				60		[]
-"http://www.sunstar.com.ph/superbalita-davao/kalingawan"			110		[]
+"http://www.sunstar.com.ph/superbalita-davao/opinyon"				79		[x]
+"http://www.sunstar.com.ph/superbalita-davao/isports"				60		[x]
+"http://www.sunstar.com.ph/superbalita-davao/kalingawan"			110		[x]
+
+bandera.inquirer

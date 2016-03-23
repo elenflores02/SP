@@ -15,17 +15,24 @@ for words in all_words:
 	        	flag = True
 	        	break
 
+	# token is not in dictionary
 	if flag == False:
-		if lines[1] == '@':
+		#mentions
+		if lines[1] == '@':	
 			new_words.append(lines[0]+"	"+lines[1]+"	"+"IV"+"\n")
+		#urls
 		elif lines[1] == 'U':
 			new_words.append(lines[0]+"	"+lines[1]+"	"+"IV"+"\n")
+		#pronouns
 		elif lines[1] == '^':
 			new_words.append(lines[0]+"	"+lines[1]+"	"+"IV"+"\n")
+		#hashtags
 		elif lines[1] == '#':
 			new_words.append(lines[0]+"	"+lines[1]+"	"+"IV"+"\n")
+		#numerals
 		elif lines[1] == '$':
 			new_words.append(lines[0]+"	"+lines[1]+"	"+"IV"+"\n")
+		#punctuations
 		elif lines[1] == ',':
 			new_words.append(lines[0]+"	"+lines[1]+"	"+"IV"+"\n")
 		else:
